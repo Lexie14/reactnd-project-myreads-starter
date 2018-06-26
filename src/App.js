@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import BookShelf from './components/BookShelf'
@@ -25,7 +26,8 @@ changeShelf = (book, shelf) => {
   render() {
     return (
       <div className="app">
-        <div className="list-books">
+       <Route exact path='/' render={() => (
+         <div className="list-books">
           <div className="list-books-title">
             <h1>MyReads</h1>
           </div>
@@ -37,9 +39,14 @@ changeShelf = (book, shelf) => {
             </div>
           </div>
         </div>
+       )}/>
       </div>
     )
   }
 }
+
+
+
+
 
 export default BooksApp
