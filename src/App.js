@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import BookShelf from './components/BookShelf'
@@ -39,6 +40,9 @@ changeShelf = (book, shelf) => {
              <BookShelf shelf='read' title='Read' books={this.state.books} changeShelf={this.changeShelf}/>
             </div>
           </div>
+          <div className="open-search">
+              <Link to='/search'></Link>
+            </div>
         </div>
        )} />
 
