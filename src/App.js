@@ -48,7 +48,10 @@ changeShelf = (book, shelf) => {
 
        <Route path='/search' render={({ history }) => (
           <div>
-            <SearchBook />
+            <SearchBook
+             books={this.state.books}
+             changeShelf={this.changeShelf} 
+            />
           </div>
        )} />
       </div>
