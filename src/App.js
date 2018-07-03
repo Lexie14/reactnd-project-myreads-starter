@@ -6,7 +6,7 @@ import './App.css'
 import BookShelf from './components/BookShelf'
 import SearchBook from './components/SearchBook'
 
-class BooksApp extends React.Component {
+class BooksApp extends Component {
     state = {
         books: []
     }
@@ -30,6 +30,7 @@ class BooksApp extends React.Component {
     }
 
     render() {
+      const { books } = this.state
         return ( <
             div className = "app" >
             <
@@ -48,27 +49,21 @@ class BooksApp extends React.Component {
                     <
                     BookShelf shelf = 'currentlyReading'
                     title = 'Currently Reading'
-                    books = {
-                        this.state.books
-                    }
+                    books = {books}
                     changeShelf = {
                         this.changeShelf
                     }
                     /> <
                     BookShelf shelf = 'wantToRead'
                     title = 'Want to Read'
-                    books = {
-                        this.state.books
-                    }
+                    books = {books}
                     changeShelf = {
                         this.changeShelf
                     }
                     /> <
                     BookShelf shelf = 'read'
                     title = 'Read'
-                    books = {
-                        this.state.books
-                    }
+                    books = {books}
                     changeShelf = {
                         this.changeShelf
                     }
@@ -83,7 +78,7 @@ class BooksApp extends React.Component {
                 )
             }
             />
-
+            
             <
             Route path = '/search'
             render = {
@@ -92,9 +87,7 @@ class BooksApp extends React.Component {
                 }) => ( <
                     div >
                     <
-                    SearchBook books = {
-                        this.state.books
-                    }
+                    SearchBook books = {books}
                     changeShelf = {
                         this.changeShelf
                     }

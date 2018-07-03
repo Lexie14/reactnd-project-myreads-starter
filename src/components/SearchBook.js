@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Route } from 'react-router-dom'
 import * as BooksAPI from '../BooksAPI'
 import '../App.css'
 import Book from './Book.js'
@@ -34,10 +33,7 @@ class SearchBook extends Component {
     }
 
     render() {
-        const {
-            booksFromSearch
-        } = this.state
-
+        
         return ( <
             div className = "search-books" >
             <
