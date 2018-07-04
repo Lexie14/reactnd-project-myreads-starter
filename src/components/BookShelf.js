@@ -1,19 +1,17 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Book from './Book'
 
-class BookShelf extends Component {
-
-    render() {
+const BookShelf = ({title, books, shelf, changeShelf}) => {
         return ( <
             div className = "bookshelf" >
             <
             h2 className = "bookshelf-title" > {
-                this.props.title
+               title
             } < /h2> <
             div className = "bookshelf-books" >
             <
             ol className = "books-grid" > {
-                this.props.books.filter((book) => book.shelf === `${this.props.shelf}`).map((book) => ( <
+                books.filter((book) => book.shelf === `${shelf}`).map((book) => ( <
                     Book key = {
                         book.id
                     }
@@ -21,7 +19,7 @@ class BookShelf extends Component {
                         book
                     }
                     changeShelf = {
-                        this.props.changeShelf
+                        changeShelf
                     }
                     />
                 ))
@@ -30,7 +28,6 @@ class BookShelf extends Component {
             /div> <
             /div>
         )
-    }
 }
 
 
