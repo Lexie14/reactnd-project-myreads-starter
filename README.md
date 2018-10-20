@@ -14,6 +14,8 @@ This is the project for Udacity's Front-End Web Developer Nanodegree. It is base
 1.1. shows 3 shelves for books: 'Currently reading', 'Want to read', 'Read' and each book is shown on the shelf chosen;   
 1.2. shows a control that allows users to move books between shelves. 
 
+![Screenshot](myreads1.jpg)
+
 2. **The search page:**  
 2.1. as the user types into the search field, books that match the query are displayed on the page;  
 2.2. invalid queries are handled and prior search results are not shown;  
@@ -21,10 +23,8 @@ This is the project for Udacity's Front-End Web Developer Nanodegree. It is base
 2.4. information about the shelf in consistent on both: main and search pages;  
 2.5. when an item is categorized on the search page and the user navigates to the main page, it appears on that shelf in the main page.
 
+![Screenshot](myreads2.jpg)
+
 ## Important
 
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
-
-![Screenshot](myreads1.jpg)
-
-![Screenshot](myreads2.jpg)
